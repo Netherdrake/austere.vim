@@ -49,10 +49,10 @@ hi MatchParen ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cte
 hi ModeMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi NonText ctermfg=254 ctermbg=NONE guifg=#e3e3e3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Pmenu ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
-hi PmenuSbar ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
-hi PmenuSel ctermfg=231 ctermbg=235 guifg=#f7f7f7 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
-hi PmenuThumb ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi Pmenu guifg=#ebebeb guibg=#141414 gui=NONE cterm=NONE
+hi PmenuSbar guifg=#ebebeb guibg=#141414 gui=NONE cterm=NONE
+hi PmenuSel guifg=#ebebeb guibg=#141414 gui=reverse cterm=reverse
+hi PmenuThumb guifg=#ebebeb guibg=#141414 gui=NONE cterm=NONE
 hi Question ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi! link QuickFixLine Search
 hi Search ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
