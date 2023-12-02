@@ -45,7 +45,9 @@ hi ErrorMsg ctermfg=167 ctermbg=233 guifg=#ce5252 guibg=#101010 guisp=NONE cterm
 hi FoldColumn ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi Folded ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE,italic gui=NONE,italic
 hi IncSearch ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi MatchParen ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+" hi MatchParen ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi MatchParen ctermfg=250 ctermbg=233 guifg=#ffffff guibg=#000000 guisp=NONE cterm=bold term=bold gui=bold
+" hi MatchParen ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi ModeMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi NonText ctermfg=254 ctermbg=NONE guifg=#e3e3e3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
