@@ -46,7 +46,7 @@ hi FoldColumn ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cte
 hi Folded ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE,italic gui=NONE,italic
 hi IncSearch ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
 " hi MatchParen ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
-hi MatchParen ctermfg=250 ctermbg=233 guifg=#ffffff guibg=#000000 guisp=NONE cterm=bold term=bold gui=bold
+hi MatchParen ctermfg=250 ctermbg=233 guifg=#ffffff guibg=#000000 guisp=NONE cterm=bold term=bold gui=underline
 " hi MatchParen ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi ModeMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
@@ -145,6 +145,11 @@ hi cppConditional ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE
 hi cRepeat ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi cOperator ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi cppOperator ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi rustConditional ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi rustTypedef ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi rustRepeat ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi rustOperator ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+" hi rustKeyword ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi ALEVirtualTextError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi ALEVirtualTextWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi ALEVirtualTextInfo ctermfg=67 ctermbg=235 guifg=#5f819d guibg=#252525 guisp=NONE cterm=NONE gui=NONE
