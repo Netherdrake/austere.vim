@@ -173,9 +173,6 @@ hi ALEVirtualTextStyleError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 
 hi ALEVirtualTextStyleWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi HighlightedyankRegion ctermfg=231 ctermbg=254 guifg=#f7f7f7 guibg=#e3e3e3 guisp=NONE cterm=NONE gui=NONE
 
-" call s:HL('cConditional', s:blue , 'NONE' , 'NONE' )
-" call s:HL('cppConditional', s:blue , 'NONE' , 'NONE' )
-" call s:HL('cStatement', s:blue , 'NONE' , 'NONE' )
 
 call s:HL('String'      , s:blue , 'NONE' , 'NONE' )
 call s:HL('Number'      , s:blue , 'NONE' , 'NONE' )
@@ -188,10 +185,10 @@ call s:HL('SpecialChar' , s:blue , 'NONE' , 'NONE' )
 call s:HL('Title'       , s:blue , 'NONE' , 'NONE' )
 call s:HL('Todo'        , s:blue , 'NONE' , 'NONE' )
 
-call s:HL('Function'     , s:blue, 'NONE', 'NONE' )
+"call s:HL('Function'     , s:blue, 'NONE', 'NONE' )
 call s:HL('Type'         , s:blue, 'NONE', 'NONE' )
 " call s:HL('Typedef'      , s:light, 'NONE', 'NONE' )
 " call s:HL('StorageClass' , s:light, 'NONE', 'NONE' )
-call s:HL('Structure'    , s:blue, 'NONE', 'NONE' )
+" call s:HL('Structure'    , s:blue, 'NONE', 'NONE' )
 
 finish
