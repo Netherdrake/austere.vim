@@ -21,6 +21,22 @@ endif
 
 let g:colors_name = 'austere'
 
+" Highlight helper function
+function! s:HL(item, fgColor, bgColor, style)
+    let command  = 'hi ' . a:item
+    let command .= ' ' . 'gui' . 'fg=' . a:fgColor
+    let command .= ' ' . 'gui' . 'bg=' . a:bgColor
+    let command .= ' ' . 'gui' . '=' . a:style
+    execute command
+endfunction
+
+let s:lime   = "#ffb700"
+let s:light  = "#f2f2f2"
+let s:blue1  = "#82cfff"
+let s:blue   = "#78a9ff"
+let s:green  = "#449d5d"
+let s:purple = "#BE95FF"
+
 if !has('gui_running') && get(g:, 'dark_transp_bg', 0)
   hi Normal ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Terminal ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -32,7 +48,7 @@ hi ColorColumn ctermfg=fg ctermbg=233 guifg=fg guibg=#101010 guisp=NONE cterm=NO
 hi Conceal ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Cursor ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi CursorColumn ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
-hi CursorLine      ctermfg=White        ctermbg=Black    cterm=NONE    guifg=#F2F2F2    guibg=#0D0D0D    gui=NONE
+hi CursorLine      ctermfg=White        ctermbg=Black    cterm=NONE    guifg=NONE    guibg=#0D0D0D    gui=NONE
 hi LineNr          ctermfg=DarkGray     ctermbg=Black    cterm=NONE    guifg=#404040    guibg=#0D0D0D    gui=NONE
 hi CursorLineNr ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi DiffAdd ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -156,135 +172,26 @@ hi ALEVirtualTextInfo ctermfg=67 ctermbg=235 guifg=#5f819d guibg=#252525 guisp=N
 hi ALEVirtualTextStyleError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi ALEVirtualTextStyleWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi HighlightedyankRegion ctermfg=231 ctermbg=254 guifg=#f7f7f7 guibg=#e3e3e3 guisp=NONE cterm=NONE gui=NONE
-finish
 
-" Background: dark
-" Color: black         #101010 ~
-" Color: darkgrey      #252525 ~
-" Color: darkstone     #7c7c7c ~
-" Color: almostwhite   #b9b9b9 ~
-" Color: grey          #8e8e8e ~
-" Color: white         #f7f7f7 ~
-" Color: beige         #e3e3e3 ~
-" Color: red           #ce5252 ~
-" color: green         #8c9440 ~
-" Color: blue          #5f819d ~
-" Color: yellow        #f0c674 ~
-"     Normal           almostwhite             none
-"     Terminal         almostwhite             none
-"     Normal           almostwhite             black
-"     Terminal         almostwhite             black
-" ColorColumn          fg                       black
-" Conceal              none                     none
-" Cursor               almostwhite              black
-" CursorColumn         almostwhite              black
-" CursorLine           almostwhite              black
-" CursorLineNr         almostwhite              black
-" DiffAdd              green                    black             reverse
-" DiffChange           yellow                   black             reverse
-" DiffDelete           red                      black             reverse
-" DiffText             almostwhite              black             bold,reverse
-" Directory            almostwhite              black
-" EndOfBuffer          almostwhite              black
-" ErrorMsg             red                      black             reverse
-" FoldColumn           almostwhite              darkgrey
-" Folded               almostwhite              darkgrey          italic
-" IncSearch            green                    black             bold
-" LineNr               almostwhite              black
-" MatchParen           almostwhite              black
-" ModeMsg              almostwhite              black
-" MoreMsg              almostwhite              black
-" NonText              beige                    none
-" Pmenu                almostwhite              darkgrey
-" PmenuSbar            almostwhite              darkgrey
-" PmenuSel             white                    darkgrey
-" PmenuThumb           almostwhite              black
-" Question             almostwhite              black
-" QuickFixLine     ->  Search
-" Search               green                    black
-" SignColumn           almostwhite              black
-" SpecialKey           beige                    black
-" SpellBad             red                      black             s=red
-" SpellCap             red                      black             s=blue
-" SpellLocal           red                      black             s=darkstone
-" SpellRare            beige                    black             s=beige reverse
-" StatusLine           almostwhite              black
-" StatusLineNC         almostwhite              black
-" StatusLineTerm    -> StatusLine
-" StatusLineTermNC  -> StatusLineNC
-" TabLine              almostwhite              black
-" TabLineFill          almostwhite              black
-" TabLineSel           almostwhite              black
-" Title                darkstone                black
-" VertSplit            black                    black
-" Visual               almostwhite              darkgrey
-" VisualNOS            almostwhite              darkgrey
-" WarningMsg           almostwhite              black
-" WildMenu             almostwhite              black
-" Boolean           -> Constant
-" Character         -> Constant
-" Comment              darkstone                none              italic
-" Conditional       -> Statement
-" Constant             grey                     none              italic
-" Define            -> PreProc
-" Debug             -> Special
-" Delimiter         -> Special
-" Error                red                      black             reverse
-" Exception         -> Statement
-" Float             -> Constant
-" Function          -> Identifier
-" Identifier           almostwhite              none
-" Ignore               almostwhite              none
-" Include           -> PreProc
-" Keyword           -> Statement
-" Label             -> Statement
-" Macro             -> PreProc
-" Number            -> Constant
-" Operator          -> Statement
-" PreCondit         -> PreProc
-" PreProc              grey                     none
-" Repeat            -> Statement
-" Special              almostwhite              none
-" SpecialChar       -> Special
-" SpecialComment    -> Special
-" Statement            grey                     none
-" StorageClass      -> Type
-" String            -> Constant
-" Structure         -> Type
-" Tag               -> Special
-" Todo                 almostwhite              none
-" Type                 almostwhite              none
-" Typedef           -> Type
-" Underlined           grey                     none
-" lCursor           -> Cursor
-" CursorIM             none              fg
-" ToolbarLine          none                     black
-" ToolbarButton        almostwhite              black             bold
-" diffAdded           green                     black
-" diffRemoved         red                       black
-" CtrlPPrtText        green                     black
-" CtrlPMatch          green                     black
-" CtrlPPrtBase        green                     black
-" CtrlPLinePre        yellow                    black
-" CtrlPPrtCursor      yellow                    black
-" mkdItalic           grey                      black
-" mkdCode             grey                      black
-" mkdSnippetSH        grey                      black
-" NERDTreeFile        almostwhite               black
-" NERDTreeExecFile    almostwhite               black
-" pythonStatement     white              black             bold
-" pythonConditional   white              black             bold
-" pythonRepeat        white              black             bold
-" pythonOperator      white              black             bold
-" pythonException     white              black             bold
-" pythonInclude       white              black             bold
-" pythonAsync         white              black             bold
-" pythonEscape        white              black             bold
-" pythonBuiltin       white              black             bold
-" pythonFunction      white              black             bold
-" ALEVirtualTextError         red              darkgrey
-" ALEVirtualTextWarning       yellow           darkgrey
-" ALEVirtualTextInfo          blue             darkgrey
-" ALEVirtualTextStyleError    red              darkgrey
-" ALEVirtualTextStyleWarning  yellow           darkgrey
-" HighlightedyankRegion white            beige
+" call s:HL('cConditional', s:blue , 'NONE' , 'NONE' )
+" call s:HL('cppConditional', s:blue , 'NONE' , 'NONE' )
+" call s:HL('cStatement', s:blue , 'NONE' , 'NONE' )
+
+call s:HL('String'      , s:blue , 'NONE' , 'NONE' )
+call s:HL('Number'      , s:blue , 'NONE' , 'NONE' )
+call s:HL('Boolean'     , s:blue , 'NONE' , 'NONE' )
+call s:HL('Float'       , s:blue , 'NONE' , 'NONE' )
+call s:HL('Constant'    , s:blue , 'NONE' , 'NONE' )
+call s:HL('Character'   , s:blue , 'NONE' , 'NONE' )
+call s:HL('SpecialChar' , s:blue , 'NONE' , 'NONE' )
+
+call s:HL('Title'       , s:blue , 'NONE' , 'NONE' )
+call s:HL('Todo'        , s:blue , 'NONE' , 'NONE' )
+
+call s:HL('Function'     , s:blue, 'NONE', 'NONE' )
+call s:HL('Type'         , s:blue, 'NONE', 'NONE' )
+" call s:HL('Typedef'      , s:light, 'NONE', 'NONE' )
+" call s:HL('StorageClass' , s:light, 'NONE', 'NONE' )
+call s:HL('Structure'    , s:blue, 'NONE', 'NONE' )
+
+finish
