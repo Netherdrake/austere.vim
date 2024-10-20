@@ -166,11 +166,11 @@ hi rustTypedef ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE ct
 hi rustRepeat ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi rustOperator ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
 " hi rustKeyword ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi ALEVirtualTextError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
-hi ALEVirtualTextWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
-hi ALEVirtualTextInfo ctermfg=67 ctermbg=235 guifg=#5f819d guibg=#252525 guisp=NONE cterm=NONE gui=NONE
-hi ALEVirtualTextStyleError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
-hi ALEVirtualTextStyleWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+" hi ALEVirtualTextError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+" hi ALEVirtualTextWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+" hi ALEVirtualTextInfo ctermfg=67 ctermbg=235 guifg=#5f819d guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+" hi ALEVirtualTextStyleError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+" hi ALEVirtualTextStyleWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi HighlightedyankRegion ctermfg=231 ctermbg=254 guifg=#f7f7f7 guibg=#e3e3e3 guisp=NONE cterm=NONE gui=NONE
 
 hi MatchParen guifg=#ffb700 ctermfg=203 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
@@ -186,10 +186,33 @@ call s:HL('SpecialChar' , s:blue , 'NONE' , 'NONE' )
 call s:HL('Title'       , s:blue , 'NONE' , 'NONE' )
 call s:HL('Todo'        , s:blue , 'NONE' , 'NONE' )
 
-"call s:HL('Function'     , s:blue, 'NONE', 'NONE' )
+" call s:HL('Function'     , '#b9b9b9', 'NONE', 'BOLD' )
 call s:HL('Type'         , s:blue, 'NONE', 'NONE' )
 " call s:HL('Typedef'      , s:light, 'NONE', 'NONE' )
 " call s:HL('StorageClass' , s:light, 'NONE', 'NONE' )
 " call s:HL('Structure'    , s:blue, 'NONE', 'NONE' )
+
+" Lightline theme (from powerlineish)
+let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+let s:p.normal.left = [ ['white', 'gray2', 'bold'], ['white', 'gray0'] ]
+let s:p.normal.right = [ ['gray10', 'gray2'], ['white', 'gray1'], ['white', 'gray0'] ]
+let s:p.inactive.right = [ ['gray1', 'gray5'], ['gray4', 'gray1'], ['gray4', 'gray0'] ]
+let s:p.inactive.left = s:p.inactive.right[1:]
+let s:p.insert.left = [ ['darkestcyan', 'white', 'bold'], ['mediumcyan', 'darkestblue'] ]
+let s:p.insert.right = [ [ 'darkestblue', 'mediumcyan' ], [ 'mediumcyan', 'darkblue' ], [ 'mediumcyan', 'darkestblue' ] ]
+let s:p.replace.left = [ ['white', 'brightred', 'bold'], ['white', 'gray0'] ]
+let s:p.visual.left = [ ['black', 'brightestorange', 'bold'], ['white', 'gray0'] ]
+let s:p.normal.middle = [ [ 'white', 'gray0' ] ]
+let s:p.insert.middle = [ [ 'mediumcyan', 'darkestblue' ] ]
+let s:p.replace.middle = s:p.normal.middle
+let s:p.replace.right = s:p.normal.right
+let s:p.tabline.left = [ [ 'gray9', 'gray0' ] ]
+let s:p.tabline.tabsel = [ [ 'gray9', 'gray2' ] ]
+let s:p.tabline.middle = [ [ 'gray2', 'gray0' ] ]
+let s:p.tabline.right = [ [ 'gray9', 'gray1' ] ]
+let s:p.normal.error = [ [ 'gray9', 'brightestred' ] ]
+let s:p.normal.warning = [ [ 'gray1', 'yellow' ] ]
+
+let g:lightline#colorscheme#austere#palette = lightline#colorscheme#fill(s:p)
 
 finish
