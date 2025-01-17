@@ -186,7 +186,7 @@ call s:HL('SpecialChar' , s:blue , 'NONE' , 'NONE' )
 call s:HL('Title'       , s:blue , 'NONE' , 'NONE' )
 call s:HL('Todo'        , s:blue , 'NONE' , 'NONE' )
 
-" call s:HL('Function'     , '#b9b9b9', 'NONE', 'BOLD' )
+call s:HL('Function'     , '#b9b9b9', 'NONE', 'BOLD' )
 call s:HL('Type'         , s:blue, 'NONE', 'NONE' )
 " call s:HL('Typedef'      , s:light, 'NONE', 'NONE' )
 " call s:HL('StorageClass' , s:light, 'NONE', 'NONE' )
